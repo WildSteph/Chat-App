@@ -1,27 +1,19 @@
 import React from "react";
-const ISOnline = true;
-const Contact = () => (
-  <div className="Contact">
-    <img
-      className="avatar"
-      src="https://cdn.discordapp.com/attachments/221721609436790784/694198643791495208/EOSwdDtU4AA8-sc.jpg"
-      alt=""
-    />
-    <div>
-      <h1 className="name">Stephaine PANTIEZ</h1>
-      <p className="status">
-        {ISOnline ? (
-          <p>
-            <span className="status-online" />online
-          </p>
-        ) : (
-          <p className="status-offline">
-            <span className="status-online" />offline
-          </p>
-        )}
-      </p>
+import "./styles.css";
+
+const Contact = function(props) {
+  return (
+    <div className="Contact">
+      <img className="avatar" src={props.avatar} alt="" />
+      <div>
+        <h4 className="name">{props.name}</h4>
+        <div className="status">
+          <span className={props.online ? "status-online" : "status-offline"} />
+          <p className="status-text"> {props.online ? "online" : "offline"} </p>
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Contact;

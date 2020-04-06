@@ -1,11 +1,12 @@
 import React from "react";
-import "./styles.css";
-import Contact from "./components/Contact.js";
-import "./components/styles.css";
-export default function App() {
+import ContactList from "./components/ContactList.js";
+
+function App() {
   return (
-    <div className="App">
-      <Contact />
+    <div>
+      <ContactList />
     </div>
   );
 }
+
+export default App;
